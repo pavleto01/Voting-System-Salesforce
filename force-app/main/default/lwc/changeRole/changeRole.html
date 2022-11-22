@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Change User Role">
+
+        <div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-combobox name="User" label="User" value={User} placeholder="Select User"
+                        options={userOptions} onchange={handleChange} required>
+                    </lightning-combobox>
+                </p>
+                <br>
+
+                <p>
+                    <lightning-combobox name="Role" label="Role" value={Role} placeholder="Select Role"
+                        options={roleOptions} onchange={handleChange} required>
+                    </lightning-combobox>
+                </p>
+            </div>
+            <br><br>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-button type="brand" label="Change Role" variant="brand" size="small"
+                        onclick={submitAction}>
+                    </lightning-button>
+                </p>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Feedback results">
+        <table class="tblColPad" border="1" cellpadding="5" cellspacing="5" bordercolor="#ccc"
+            style="border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th>Feedback Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <template for:each={feedData} for:item="feedItem">
+                    <tr key={feedItem.Id}>
+                        <td>{feedItem.Name}</td>
+                        <td>{feedItem.Feedback_description__c}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+</template>

@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Add new nomination">
+
+        <div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-input label="Title" type="text" value={Name} name="Name" onchange={HandleChange}
+                        required>
+                    </lightning-input>
+                </p>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-textarea label="Description" type="textarea" value={Description} name="Description"
+                        onchange={HandleChange} required></lightning-textarea>
+                </p>
+            </div>
+
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-button type="brand" label="Submit" variant="brand" size="small" onclick={submitAction}>
+                    </lightning-button>
+                </p>
+            </div>
+        </div>
+    </lightning-card>
+</template>

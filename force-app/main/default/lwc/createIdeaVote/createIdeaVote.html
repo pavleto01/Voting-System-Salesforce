@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Vote for Idea">
+
+        <div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-combobox name="Idea" label="Idea" value={Idea} placeholder="Select idea"
+                        options={ideaOptions} onchange={handleChange} required>
+                    </lightning-combobox>
+                </p>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-combobox name="Vote" label="Vote" value={Vote} placeholder="Select your vote"
+                        options={voteOptions} onchange={handleChange} required>
+                    </lightning-combobox>
+                </p>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-button type="brand" label="Vote" variant="brand" size="small" onclick={submitAction}>
+                    </lightning-button>
+                </p>
+            </div>
+        </div>
+    </lightning-card>
+</template>

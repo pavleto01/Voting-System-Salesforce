@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Create Candidate">
+
+        <div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-combobox name="Candidates" label="Candidates" value={Candidates}
+                        placeholder="Select person" options={userOptions} onchange={handleChange} required>
+                    </lightning-combobox>
+
+
+
+                    <lightning-combobox name="Nomination" label="Nomination" value={Nomination}
+                        placeholder="Select nomination" options={nominationOptions} onchange={handleChange} required>
+                    </lightning-combobox>
+                </p>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-textarea label="Reason" type="textarea" value={Reason} name="Reason"
+                        onchange={handleChange} required></lightning-textarea>
+                </p>
+            </div>
+
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium">
+                <p>
+                    <lightning-button type="brand" label="Create Candidate" variant="brand" size="small"
+                        onclick={submitAction}>
+                    </lightning-button>
+                </p>
+            </div>
+        </div>
+    </lightning-card>
+</template>
